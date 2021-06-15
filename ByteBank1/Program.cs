@@ -16,8 +16,12 @@ namespace ByteBank1
 
             GerenteDeConta thalita = new GerenteDeConta("154.358.947-21");
             thalita.Nome = "Thalita";   
-            thalita.Senha = "abc" ;
+            thalita.Senha = "abc";
 
+            ParceiroComercial marie = new ParceiroComercial();
+            marie.Senha = "auau";
+
+            sistemaInterno.Logar(marie, "auau");
             sistemaInterno.Logar(roberta, "123");
             sistemaInterno.Logar(thalita, "acb");
         

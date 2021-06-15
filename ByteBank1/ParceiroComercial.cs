@@ -3,23 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ByteBank1.Funcionarios;
+using ByteBank1.Sistemas;
 
-namespace ByteBank1.Sistemas
+namespace ByteBank1
 {
-    public abstract class Autenticavel : Funcionario
-    { 
+    public class ParceiroComercial : IAutenticavel
+    {
         public string Senha { get; set; }
-
-        public Autenticavel(double salario, string cpf) : base(salario, cpf) {
-        }
-        
         public bool Autenticar(string senha) {
             return this.Senha == senha;
         }
-
-        
-
+    
     }
-       
 }
