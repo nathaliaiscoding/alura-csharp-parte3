@@ -1,50 +1,46 @@
 ﻿using System;
 using ByteBank1.Funcionarios;
+using ByteBank1.Sistemas;
 
 namespace ByteBank1
 {
     class Program
     {
+
+        public static void UsarSistema() {
+            SistemaInterno sistemaInterno = new SistemaInterno();
+
+            Diretor roberta = new Diretor("454.658.147-33");
+            roberta.Nome = "Roberta";  
+            roberta.Senha = "123";
+
+            GerenteDeConta thalita = new GerenteDeConta("154.358.947-21");
+            thalita.Nome = "Thalita";   
+            thalita.Senha = "abc" ;
+
+            sistemaInterno.Logar(roberta, "123");
+            sistemaInterno.Logar(thalita, "acb");
+        
+    }
+
         static void Main(string[] args)
-        {
-            GerenciadorBonificacoes gerenciadorBonificacao = new GerenciadorBonificacoes();
+        {                      
+/*          GerenciadorBonificacoes gerenciadorBonificacao = new GerenciadorBonificacoes();
 
             Funcionario carlos = new Designer("546.879.157-20");
-            carlos.Nome = "Carlos";
-
-
-            Funcionario roberta = new Diretor("454.658.147-33");
-            roberta.Nome = "Roberta";  
-                        
+            carlos.Nome = "Carlos";                        
             
-            Funcionario thalita = new GerenteDeConta("154.358.947-21");
-            thalita.Nome = "Thalita";        
-            
-
-            Funcionario nathalia = new Auxiliar("154.358.947-21");
-            nathalia.Nome = "Nathalia";        
+            Auxiliar nathalia = new Auxiliar("154.358.947-21");
+            nathalia.Nome = "Nathalia";              
 
             gerenciadorBonificacao.Registrar(carlos);      
             gerenciadorBonificacao.Registrar(roberta);
             gerenciadorBonificacao.Registrar(thalita);
             gerenciadorBonificacao.Registrar(nathalia);
             
-            Console.WriteLine("-----------------------");
-            Console.WriteLine(carlos.Nome);
-            Console.WriteLine(carlos.GetBonificacao());
-            Console.WriteLine("-----------------------");
-            Console.WriteLine(roberta.Nome);
-            Console.WriteLine(roberta.GetBonificacao());
-            Console.WriteLine("-----------------------");
-            Console.WriteLine(thalita.Nome);
-            Console.WriteLine(thalita.GetBonificacao());
-            Console.WriteLine("-----------------------");   
-            Console.WriteLine(nathalia.Nome);
-            Console.WriteLine(nathalia.GetBonificacao());
-            Console.WriteLine("-----------------------");
-            Console.WriteLine("-----------------------");
             Console.WriteLine("Total de bonificações: R$" + gerenciadorBonificacao.GetTotalBonificacao());
-            Console.ReadLine(); 
+  */         UsarSistema();
+             Console.ReadLine(); 
         }
-    }
+    }   
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ByteBank1.Sistemas;
 
 namespace ByteBank1.Funcionarios
 {
@@ -13,13 +14,8 @@ namespace ByteBank1.Funcionarios
         public double Salario { get; protected set; }
         public static int TotalFuncionarios { get; private set; }
 
-        public abstract double GetBonificacao() {
-            return Salario * 0.10;
-        }
-
-        public abstract void AumentarSalario() {
-            Salario *= 1.1;
-        }
+        public abstract double GetBonificacao();
+        public abstract void AumentarSalario();
 
          public Funcionario(double salario, string cpf) {
             Salario = salario;
